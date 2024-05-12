@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>Serautos FT</title>
+	<link rel="stylesheet" href="src/css/styles.css" type="text/css" />
+	<link rel="stylesheet" href="src/css/header.css" type="text/css" />
+    <link rel="stylesheet" href="src/css/whatsApp-Button.css" type="text/css" />
+    <link rel="stylesheet" href="src/css/sections.css" type="text/css" />
+    <link rel="stylesheet" href="src/css/calendar.css" type="text/css" />
+    <link rel="stylesheet" href="src/css/modal.css" type="text/css" />
+    <link rel="stylesheet" href="src/css/carrusel.css" type="text/css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+
+    <script src="https://kit.fontawesome.com/a2dc166a48.js" crossorigin="anonymous"></script>
+    <script src="src/js/modalServices.js" defer></script>
+    <script src="src/js/modalClientes.js" defer></script>
+</head>
+<body>
+    <!-- Sección 1: Encabezado -->
+    <header>
+        <div class="logo">
+            <img src="src/public/granImago.png" width="50px" height="50px" alt="imagotipo">
+        </div>
+        <div class="banner">
+            <div class="descripcion" id="description">
+                <h1>Serautos FT</h1>
+                <h2>Transporte Ejecutivo</h2>
+                <p>Elegancia y profesionalismo en cada traslado<br />
+                    Más que un Destino, un Recorrido de Lujo</p>
+                <h3>Comunicate con Nosotros</h3>
+            </div>
+            <a href="whatsapp://send?phone=573001151592text=%21Hola%21%20Quisiera%20contratar%20un%20servicio." class="whatsapp-button" target="_blank">
+                <i class="fa fa-whatsapp"></i>
+            </a>
+        </div>
+		<div id="stylefive">
+            <ul>
+                <li><a href="#description" class="current">Sobre Nosotros</a></li>
+                <li><a href="#services" class="current">Nuestros Servicios</a></li>
+                <li><a href="#leads" class="current">Nuestros Clientes</a></li>
+                <li><a href="#reserve" class="current">Reserva Ahora</a></li>
+                <li><a href="#contact" class="current">Contacto</a></li>
+                
+            </ul>
+            <hr />
+		</div>
+    </header>
+    
+    <!-- Sección 2: Servicios -->
+    <section class="servicios" id="services">
+        <h2>Nuestros Servicios</h2>
+        <div class="servicio">
+            <img src="transporte-aeropuerto.jpg" alt="Transporte al aeropuerto">
+            <h3>Transporte al Aeropuerto</h3>
+            <p>Ofrecemos traslados seguros y puntuales al aeropuerto.</p>
+            <button onclick="abrirModal('modal1')">Más información</button>
+        </div>
+        <div class="servicio">
+            <img src="traslados-eventos-especiales.jpg" alt="Traslados a eventos especiales">
+            <h3>Traslados a Eventos Especiales</h3>
+            <p>Llevamos a nuestros clientes a eventos especiales con estilo y comodidad.</p>
+            <button onclick="abrirModal('modal2')">Más información</button>
+        </div>
+        <div class="servicio">
+            <img src="viajes-por-la-ciudad.jpg" alt="Viajes por la ciudad">
+            <h3>Viajes por la Ciudad</h3>
+            <p>Explora la ciudad con nuestros servicios de transporte personalizados.</p>
+            <button onclick="abrirModal('modal3')">Más información</button>
+        </div>
+        <div class="servicio">
+            <img src="servicios-chofer-largo-plazo.jpg" alt="Servicios de chofer a largo plazo">
+            <h3>Servicios de Chofer a Largo Plazo</h3>
+            <p>Proporcionamos choferes dedicados para necesidades a largo plazo.</p>
+            <button onclick="abrirModal('modal4')">Más información</button>
+        </div>
+    </section>
+
+    <!-- Ventanas Modal de Sección Servicios -->
+    <div id="modal1" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar" onclick="cerrarModal('modal1')">&times;</span>
+            <h3>Transporte al Aeropuerto</h3>
+            <p>Detalles adicionales sobre el servicio de transporte al aeropuerto.</p>
+        </div>
+    </div>
+    <div id="modal2" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar" onclick="cerrarModal('modal2')">&times;</span>
+            <h3>Traslados a Eventos Especiales</h3>
+            <p>Detalles adicionales sobre los traslados a eventos especiales.</p>
+        </div>
+    </div>
+    <div id="modal3" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar" onclick="cerrarModal('modal3')">&times;</span>
+            <h3>Viajes por la Ciudad</h3>
+            <p>Detalles adicionales sobre los viajes personalizados por la ciudad.</p>
+        </div>
+    </div>
+    <div id="modal4" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar" onclick="cerrarModal('modal4')">&times;</span>
+            <h3>Servicios de Chofer a Largo Plazo</h3>
+            <p>Detalles adicionales sobre los servicios de chofer a largo plazo.</p>
+        </div>
+    </div>
+
+    <!-- Sección 3: Clientes -->
+    <section class="clientes" id="leads">
+        <h2>Nuestros Clientes</h2>    
+        <div class="testimonios">
+            <h3>Testimonios</h3>
+            <div class="testimonio-carousel">
+                <!-- Aquí se añadirán los testimonios dinámicamente con JavaScript -->
+            </div>
+            <button onclick="abrirModal('modalTestimonios')">Ver más</button>
+        </div>
+        <div class="empresas">
+            <h3>Empresas Clientes</h3>
+            <div class="empresas-carousel">
+                <!-- Logotipos de empresas clientes aquí -->
+                <div class="slider">
+                    <div class="slide-track">
+                        <div class="slide">
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
+                        </div>
+                        <div class="slide">
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+        <div class="estudios-casos">
+            <h3>Estudios de Casos</h3>
+            <p>Descubre cómo hemos ayudado a otras empresas a tener éxito.</p>
+            <button onclick="abrirModal('modalEstudios')">Ver más</button>
+        </div>
+    </section>
+
+    <!-- Ventanas Modal de Sección Clientes -->
+    <div id="modalTestimonios" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar" onclick="cerrarModal('modalTestimonios')">&times;</span>
+            <h3>Nuestros Clientes Satisfechos</h3>
+            <p>Testimonios:</p>
+        </div>
+    </div>
+    <div id="modalEstudios" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar" onclick="cerrarModal('modalEstudios')">&times;</span>
+            <h3>Nuestros Clientes Satisfechos</h3>
+            <p>Testimonios:</p>
+        </div>
+    </div>
+
+    <!-- Sección 4: Reservas -->
+    <section class="reservas" id="reserve">
+        <div class="disponibilidad">
+            <h3>Disponibilidad</h3>
+            <!-- Calendario de disponibilidad aquí -->
+            <div class="calendar">
+                <div class="month">
+                    <h2>Mayo 2024</h2>
+                </div>
+                <div class="weekdays">
+                    <div>Dom</div>
+                    <div>Lun</div>
+                    <div>Mar</div>
+                    <div>Mié</div>
+                    <div>Jue</div>
+                    <div>Vie</div>
+                    <div>Sáb</div>
+                </div>
+                <div class="days"></div>
+            </div>
+            <div>
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha">
+            </div>
+            <div>
+                <label for="hora">Hora:</label>
+                <input type="time" id="hora">
+            </div>
+            <script src="calendarScript.js"></script>            
+
+        <h2>Reserva Ahora</h2>
+        <form action="reservar.php" method="POST">
+            <!-- Formulario de reserva aquí -->
+            <h1>Reserva de transporte</h1>
+
+            <form id="formularioReserva">
+                <section>
+                    <h2>Información personal</h2>
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+        
+                    <label for="correo">Correo electrónico:</label>
+                    <input type="email" id="correo" name="correo" required>
+        
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" required>
+                </section>
+        
+                <section>
+                    <h2>Detalles del viaje</h2>
+                    <label for="origen">Origen:</label>
+                    <input type="text" id="origen" name="origen" required>
+        
+                    <label for="destino">Destino:</label>
+                    <input type="text" id="destino" name="destino" required>
+        
+                    <label for="fecha">Fecha:</label>
+                    <input type="date" id="fecha" name="fecha" required>
+        
+                    <label for="hora">Hora:</label>
+                    <input type="time" id="hora" name="hora" required>
+        
+                    <label for="pasajeros">Número de pasajeros:</label>
+                    <input type="number" id="pasajeros" name="pasajeros" min="1" required>
+        
+                    <label for="tipoServicio">Tipo de servicio:</label>
+                    <select id="tipoServicio" name="tipoServicio" required>
+                        <option value="taxi">Taxi</option>
+                        <option value="autobus">Autobús</option>
+                        <option value="trasladoAeropuerto">Traslado al aeropuerto</option>
+                    </select>
+                </section>
+        
+                <section>
+                    <h2>Información de pago</h2>
+                    <label for="tarjetaCredito">Número de tarjeta de crédito:</label>
+                    <input type="text" id="tarjetaCredito" name="tarjetaCredito" required>
+        
+                    <label for="cvv">CVV:</label>
+                    <input type="number" id="cvv" name="cvv" required>
+        
+                    <label for="fechaVencimiento">Fecha de vencimiento:</label>
+                    <input type="month" id="fechaVencimiento" name="fechaVencimiento" required>
+                </section>
+        
+                <button type="submit">Reservar</button>
+            </form>
+        
+            <script src="script.js"></script>
+        </form>
+        </div>
+        
+        <div class="pagos">
+            <h3>Pago en Línea</h3>
+            <p>Aceptamos tarjetas de crédito y débito para tu conveniencia.</p>
+        </div>
+    </section>
+
+    <div id="stylefive">
+        <ul>
+            <li><a href="#description" class="current">Sobre Nosotros</a></li>
+			<li><a href="#services" class="current">Nuestros Servicios</a></li>
+			<li><a href="#leads" class="current">Nuestros Clientes</a></li>
+			<li><a href="#reserve" class="current">Reserva Ahora</a></li>
+			<li><a href="#contact" class="current">Contacto</a></li>
+		</ul>
+        <hr />
+    </div>
+
+    <!-- Footer -->
+	<footer>
+            <!-- Sección 5: Información de Contacto -->
+    <section class="contacto" id="contact">
+        <h2>Contacto</h2>
+        <p>Dirección: Calle Principal #123, Ciudad, País</p>
+        <p>Teléfono: (123) 456-7890</p>
+        <p>Correo Electrónico: info@serautosft.com</p>
+        <div class="formulario-contacto">
+            <!-- Formulario de contacto en línea aquí -->
+        </div>
+        <div class="redes-sociales">
+            <h3>Síguenos en Redes Sociales</h3>
+            <a href="#" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+            <!-- Enlaces a redes sociales aquí -->
+        </div>
+    </section>
+		<a href="https://deCaldas.github.io/home/">
+			<small>
+				<p>Sitio Web creado por Diego Whiskey. Derechos Reservados &copy; 
+					<span id="currentYear"></span> Serautos FT
+				</p>
+			</small>
+		</a>
+		<script>// Get the current year element
+			const currentYearElement = document.getElementById('currentYear');
+			// Update the current year in the element
+			const currentYear = new Date().getFullYear();
+			currentYearElement.textContent = currentYear;
+		</script>
+	</footer>
+	</body>
+</html>
