@@ -21,9 +21,9 @@ header {
 
 .descripcion {
 	text-align: center;
-	text-shadow: black 1px 1px;
+	text-shadow: 1px 1px 2px black;
 	color: burlywood;
-	padding: 73px 0 73px;
+	padding: 7%;
 }
 
 .descripcion p {

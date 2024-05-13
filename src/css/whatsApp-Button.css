@@ -1,28 +1,23 @@
 /* Botón de WhatsApp */
+/* Estilos generales del botón */
 .whatsapp-button {
-    /* Estilos generales del botón */
-    position: fixed;
     width: 73px;
     height: 73px;
+    position: fixed;
     bottom: 23px;
-    right: 17px;
-    background-color: #00f07f;
-    border-radius: 50%;
-    text-align: center;
-    font-size: 30px;
-    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+    right: 23px;
     z-index: 100;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
 }
 
-/* Prevent shrinking on very large screens */
-@media (min-width: 768px) {
-    .whatsapp-button {
-        max-width: 73px;
-        /* Set a maximum width to prevent accidental expansion */
-        max-height: 73px;
-        /* Set a maximum height to prevent accidental expansion */
-    }
+svg {
+    width: 90px;
+    filter: drop-shadow(0 3px 7px rgba(0, 0, 0, .7));
+}
+
+circle {
+    fill: #25d366;
+}
+
+path {
+    fill: #fff;
 }

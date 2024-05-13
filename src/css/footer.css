@@ -1,0 +1,31 @@
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center
+}
+
+
+/* Información de contacto */
+.contacto {
+    padding: 40px 0;
+}
+
+.contacto p {
+    margin-bottom: 15px;
+}
+
+.formulario-contacto {
+    margin-bottom: 30px;
+}
+
+.redes-sociales {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.redes-sociales a {
+    margin: 0 10px;
+}
