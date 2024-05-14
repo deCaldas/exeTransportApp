@@ -1,3 +1,14 @@
+/* Disponibilidad */
+/* Reservas */
+.disponibilidad {
+    margin: 23px 0;
+    padding: 23px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
 .calendar {
     max-width: 400px;
     margin: 0 auto;
@@ -56,5 +67,35 @@ input[type="time"] {
     border: 1px solid #ccc;
     border-radius: 7px;
     box-sizing: border-box;
+    text-align: center;
+}
+
+.reservas form {
+    margin-bottom: 30px;
+}
+
+.reservas label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.reservas input,
+.reservas select,
+.reservas textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+}
+
+.reservas button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.pagos {
     text-align: center;
 }
