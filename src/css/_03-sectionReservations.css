@@ -1,5 +1,19 @@
 /* Disponibilidad */
 /* Reservas */
+.reservar button {
+    margin: 7px 0 2px;
+    padding: 11px 17px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.reservar button:hover {
+    background-color: #0056b3;
+}
+
 .disponibilidad {
     margin: 23px 0;
     padding: 23px;

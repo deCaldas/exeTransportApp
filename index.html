@@ -4,17 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-    <title>Serautos FT</title>
+    
+    <title>Empresa de Transporte</title>
+
 	<link rel="stylesheet" href="src/css/styles.css" type="text/css" />
 	<link rel="stylesheet" href="src/css/header.css" type="text/css" />
     <link rel="stylesheet" href="src/css/whatsApp-Button.css" type="text/css" />
+    <link rel="stylesheet" href="src/css/_00-modalSections.css" type="text/css" />
     <link rel="stylesheet" href="src/css/_01-sectionServices.css" type="text/css" />
     <link rel="stylesheet" href="src/css/_02-sectionLeads.css" type="text/css" />
     <link rel="stylesheet" href="src/css/_03-sectionReservations.css" type="text/css" />
     <link rel="stylesheet" href="src/css/_04-sectionContact.css" type="text/css" />
-    <link rel="stylesheet" href="src/css/calendar.css" type="text/css" />
-    <link rel="stylesheet" href="src/css/modal.css" type="text/css" />
-    <link rel="stylesheet" href="src/css/carrusel.css" type="text/css" />
     <link rel="stylesheet" href="src/css/footer.css" type="text/css" />
 
     <script src="https://kit.fontawesome.com/a2dc166a48.js" crossorigin="anonymous"></script>
@@ -24,19 +24,24 @@
 <body>
     <!-- Sección 1: Encabezado -->
     <header>
+        <div class="alert">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+            🚧<strong>¡ADVERTENCIA!</strong> Página web en construcción. Perdona las molestias.🚧
+        </div>
         <div class="logo">
             <img src="src/public/granImago.png" width="50px" height="50px" alt="imagotipo">
         </div>
         <div class="banner">
             <div class="descripcion" id="description">
-                <h1>Serautos FT</h1>
+                <h1>Empresa de Transporte</h1>
                 <h2>Transporte Ejecutivo</h2>
                 <p>Elegancia y profesionalismo en cada traslado.<br />
                     Más que un Destino, un Recorrido de Lujo.</p>
                 <h3>Comunicate con Nosotros</h3>
                 <div>
                     <div class="whatsapp-button" id="whatsapp">
-                    <a href="https://api.whatsapp.com/send?phone=573104415167&text=Buenas.%20Quisiera%20contratar%20un%20servicio." class="whatsapp-button" target="_blank"> 
+
+                    <a href="https://api.whatsapp.com/send?phone=573001151592&text=Buenas.%20Quisiera%20contratar%20un%20servicio." class="whatsapp-button" target="_blank"> 
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
                         <!-- Created with SVG-edit - https://github.com/SVG-Edit/svgedit-->
                         <g class="layer">
@@ -207,36 +212,44 @@
     <!-- Sección 4: Reservas -->
     <section class="reservas" id="reserve">
         <!-- Calendario de disponibilidad aquí -->
-        <div class="disponibilidad">
-            <h3>Disponibilidad</h3>
-            <div class="calendar">
-                <div class="month">
-                    <h2>Mayo 2024</h2>
+        <div id="modalDisponibilidad" class="modal">
+            <div class="modal-contenido">
+                <span class="cerrar" onclick="cerrarModal('modalDisponibilidad')">&times;</span>
+                <div class="disponibilidad">
+                    <h3>Disponibilidad</h3>
+                    <div class="calendar">
+                        <div class="month">
+                            <h2>Mayo 2024</h2>
+                        </div>
+                        <div class="weekdays">
+                            <div>Dom</div>
+                            <div>Lun</div>
+                            <div>Mar</div>
+                            <div>Mié</div>
+                            <div>Jue</div>
+                            <div>Vie</div>
+                            <div>Sáb</div>
+                        </div>
+                        <div class="days"></div>
+                    </div>
+                    <div>
+                        <label for="fecha">Fecha:</label>
+                        <input type="date" id="fecha">
+                    </div>
+                    <div>
+                        <label for="hora">Hora:</label>
+                        <input type="time" id="hora">
+                    </div>
+                    <script src="calendarScript.js"></script>            
                 </div>
-                <div class="weekdays">
-                    <div>Dom</div>
-                    <div>Lun</div>
-                    <div>Mar</div>
-                    <div>Mié</div>
-                    <div>Jue</div>
-                    <div>Vie</div>
-                    <div>Sáb</div>
-                </div>
-                <div class="days"></div>
             </div>
-            <div>
-                <label for="fecha">Fecha:</label>
-                <input type="date" id="fecha">
-            </div>
-            <div>
-                <label for="hora">Hora:</label>
-                <input type="time" id="hora">
-            </div>
-            <script src="calendarScript.js"></script>            
         </div>
 
         <div class="reservar">
             <h2>Reserva Ahora</h2>
+            <div class="reservar">
+                <button onclick="abrirModal('modalDisponibilidad')">Calendario de disponibilidad</button>
+            </div>
             <!-- Formulario de reserva aquí -->
             <form action="reservar.php" method="POST">
                 <h1>Reserva de transporte</h1>
@@ -305,37 +318,47 @@
     </section>
 
     <!-- Sección 5: Información de Contacto -->
-    <section class="contacto" id="contact">
-        <h2>Contacto</h2>
-        <p>Dirección: Calle Principal #123, Ciudad, País</p>
-        <p>Teléfono: (123) 456-7890</p>
-        <p>Correo Electrónico: info@serautosft.com</p>
-        <!-- Formulario de contacto en línea aquí -->
-        <div class="formulario-contacto">
-            <form action="contactar.php" method="POST">
-                    <h1>Contacto en línea</h1>
-                    <form id="formularioContacto">
-                        <section>
-                            <h2>Información personal</h2>
-                            <label for="nombre">Nombre completo:</label>
-                            <input type="text" id="nombre" name="nombre" required>
-                            
-                            <label for="correo">Correo electrónico:</label>
-                            <input type="email" id="correo" name="correo" required>
-                            
-                            <label for="telefono">Teléfono:</label>
-                            <input type="tel" id="telefono" name="telefono" required>
-                        </section>
-                        <button type="submit">Reservar</button>
-                    </form>
-        </div>
-
+    <section class="contact" id="contact">
         <!-- Enlaces a redes sociales aquí -->
         <div class="redes-sociales">
             <h3>Síguenos en Redes Sociales</h3>
             <a href="#" target="_blank"><i class="fa-brands fa-facebook"></i></a>
             <a href="#" target="_blank"><i class="fa-brands fa-twitter"></i></a>
         </div>
+
+        <div class="contacto">
+            <h2>Contacto</h2>
+            <p>Dirección: Calle Principal #123, Ciudad, País</p>
+            <p>Teléfono: (123) 456-7890</p>
+            <p>Correo Electrónico: info@empresaDeTrasporte.com</p>
+            <div>
+                <button onclick="abrirModal('modalContacto')">Formulario de Contacto</button>
+            </div>    
+        </div>
+        <!-- Formulario de contacto en línea aquí -->
+        <div id="modalContacto" class="modal">
+            <div class="modal-contenido">
+                <span class="cerrar" onclick="cerrarModal('modalContacto')">&times;</span>
+                <div class="formulario-contacto">
+                    <form action="contactar.php" method="POST">
+                        <h1>Contacto en línea</h1>
+                        <form id="formularioContacto">
+                            <section>
+                                <h2>Información personal</h2>
+                                <label for="nombre">Nombre completo:</label>
+                                <input type="text" id="nombre" name="nombre" required>
+                                
+                                <label for="correo">Correo electrónico:</label>
+                                <input type="email" id="correo" name="correo" required>
+                                
+                                <label for="telefono">Teléfono:</label>
+                                <input type="tel" id="telefono" name="telefono" required>
+                            </section>
+                            <button type="submit">Reservar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
     </section>
 
     <div id="stylefive">
@@ -354,7 +377,7 @@
         <a href="https://deCaldas.github.io/home/">
             <small>
                 <p>Sitio Web creado por Diego Whiskey. Derechos Reservados &copy;
-                    <span id="currentYear"></span> Serautos FT
+                    <span id="currentYear"></span> Empresa de Transporte
 				</p>
 			</small>
 		</a>
@@ -366,5 +389,5 @@
             </script>
 	</footer>
 </body>
-<script src="src/js/index.js"></script>
+<!-- <script src="src/js/index.js"></script> -->
 </html>

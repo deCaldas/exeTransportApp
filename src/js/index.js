@@ -1,1 +1,3 @@
-/* window.alert("Ten la Bienvenida a la página web de Serautos FT\n\nAdvertencia: Esta página web esta en construcción. Así que perdona las molestias.") */
+window.alert(
+    "ADVERTENCIA\n 🚧 Página web esta en construcción. Perdona las molestias. 🚧"
+);

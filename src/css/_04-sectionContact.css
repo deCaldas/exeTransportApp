@@ -1,0 +1,43 @@
+/* Redes Sociales */
+.redes-sociales {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.redes-sociales a {
+    margin: 0 10px;
+}
+
+/* Información de contacto */
+.contacto,
+.redes-sociales {
+    margin: 23px 0;
+    padding: 23px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.contacto p {
+    margin-bottom: 15px;
+}
+
+.formulario-contacto {
+    margin-bottom: 30px;
+}
+
+.contacto button {
+    margin: 7px 0 2px;
+    padding: 11px 17px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.contacto button:hover {
+    background-color: #0056b3;
+}
