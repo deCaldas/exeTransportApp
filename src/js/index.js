@@ -1,3 +1,3 @@
 window.alert(
-    "ADVERTENCIA\n 🚧 Página web esta en construcción. Perdona las molestias. 🚧"
+    "ADVERTENCIA\n 🚧 Página web en construcción. Perdona las molestias. 🚧"
 );
