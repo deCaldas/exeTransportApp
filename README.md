@@ -1,18 +1,19 @@
 # exeTransportApp
-## Aplicación web para empresa de transporte ejecutivo de pasajeros
+## README para aplicación web de transporte ejecutivo
+
+Una aplicación web sencilla puede ser una herramienta valiosa para una empresa de transporte ejecutivo de pasajeros. Puede ayudar a mejorar la experiencia del cliente, aumentar la eficiencia y la rentabilidad del negocio.
 
 **Descripción:**
 
-La aplicación web permite a los clientes de una empresa de transporte ejecutivo reservar viajes, gestionar sus cuentas y realizar pagos de manera online. 
+Esta aplicación web permite a los clientes de una empresa de transporte ejecutivo de pasajeros reservar viajes, gestionar sus cuentas y realizar pagos de manera online.
 
 **Funcionalidades:**
 
 * **Solicitud de viajes:**
-    * Los clientes pueden seleccionar su origen, destino, fecha y hora de viaje;
-    * Pueden _elegir_ entre diferentes tipos de vehículos, como sedanes, SUVs o vans;
-    * Entre diferentes tipos de servicios, como translado al aeropuerto o paseos por la ciudad;
-    * Pueden ver el precio estimado del viaje antes de reservarlo;
-    * Pueden ingresar información adicional sobre sus preferencias, como la necesidad de asientos para niños o asistencia con equipaje.
+    * Los clientes pueden seleccionar su origen, destino, fecha y hora de viaje.
+    * Pueden elegir entre diferentes tipos de vehículos.
+    * Pueden ver el precio estimado del viaje antes de reservarlo.
+    * Pueden ingresar información adicional sobre sus preferencias.
 * **Gestión de cuentas:**
     * Los clientes pueden crear y gestionar sus cuentas personales.
     * Pueden actualizar sus datos de contacto e información de pago.
@@ -22,11 +23,34 @@ La aplicación web permite a los clientes de una empresa de transporte ejecutivo
     * Pueden guardar su información de pago para futuras reservas.
 * **Seguimiento de viajes:**
     * Los clientes pueden ver el estado de su viaje en tiempo real.
-    * Pueden recibir notificaciones sobre el estado del viaje, como la hora de llegada del conductor.
+    * Pueden recibir notificaciones sobre el estado del viaje.
     * Pueden comunicarse con el conductor a través de la aplicación.
 * **Valoraciones:**
     * Los clientes pueden valorar a los conductores al finalizar el viaje.
     * La empresa puede utilizar las valoraciones para mejorar la calidad del servicio.
+
+**Requisitos:**
+
+* Servidor web con PHP y MySQL instalados.
+* Base de datos MySQL.
+* Navegador web moderno.
+
+**Instalación:**
+
+1. Clonar el repositorio de la aplicación web.
+2. Crear una base de datos MySQL y configurar la conexión a la base de datos en el archivo de configuración.
+3. Subir la aplicación web al servidor web.
+4. Acceder a la aplicación web en un navegador web.
+
+**Uso:**
+
+1. Crear una cuenta de usuario o iniciar sesión en una cuenta existente.
+2. Seleccionar el origen, destino, fecha y hora del viaje.
+3. Elegir el tipo de vehículo y ver el precio estimado del viaje.
+4. Ingresar información adicional sobre sus preferencias (opcional).
+5. Confirmar la reserva y realizar el pago.
+6. Seguir el estado del viaje en tiempo real.
+7. Valorar al conductor al finalizar el viaje (opcional).
 
 **Beneficios:**
 
@@ -43,11 +67,11 @@ La aplicación web permite a los clientes de una empresa de transporte ejecutivo
 
 **Diseño:**
 
-La aplicación web debe tener un diseño limpio, intuitivo y fácil de usar. Debe ser compatible con diferentes dispositivos, como computadoras de escritorio, laptops, tablets y smartphones.
+Diseño limpio, intuitivo y fácil de usar. Compatible con diferentes dispositivos, como computadoras de escritorio, laptops, tablets y smartphones.
 
 **Tecnología:**
 
-La aplicación web puede desarrollarse utilizando diferentes lenguajes de programación y frameworks, como HTML, CSS, JavaScript, PHP, Python o Ruby on Rails.
+Desarrollo utilizando HTML, CSS, JavaScript.
 
 **Ejemplos de aplicaciones similares:**
 
@@ -62,6 +86,11 @@ La aplicación web puede desarrollarse utilizando diferentes lenguajes de progra
 * La empresa debe garantizar la seguridad de los datos de los clientes.
 * La empresa debe ofrecer un servicio de atención al cliente de calidad.
 
-**Conclusión:**
+**Soporte:**
 
-Una aplicación web sencilla puede ser una herramienta valiosa para una empresa de transporte ejecutivo de pasajeros. Puede ayudar a mejorar la experiencia del cliente, aumentar la eficiencia y la rentabilidad del negocio.
+Para obtener soporte, puede enviar un correo electrónico a [correo electrónico de soporte].
+
+**Licencia:**
+
+Esta aplicación web se distribuye bajo la licencia [ISC](./LICENSE/).
+
