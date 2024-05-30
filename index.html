@@ -211,10 +211,8 @@
 
     <!-- Sección 4: Reservas -->
     <section class="reservas" id="reserve">
+        <h2>Reserva Ahora</h2>
         <!-- Calendario de disponibilidad aquí -->
-        <div id="modalDisponibilidad" class="modal">
-            <div class="modal-contenido">
-                <span class="cerrar" onclick="cerrarModal('modalDisponibilidad')">&times;</span>
                 <div class="disponibilidad">
                     <h3>Disponibilidad</h3>
                     <div class="calendar">
@@ -244,88 +242,102 @@
                 </div>
             </div>
         </div>
-
         <div class="reservar">
-            <h2>Reserva Ahora</h2>
-            <div class="reservar">
-                <button onclick="abrirModal('modalDisponibilidad')">Calendario de disponibilidad</button>
+            <h3>Solicitud de Transporte</h3>
+            <div >
+                <button onclick="abrirModal('modalFormReservas')">Formulario de Reservación</button>
             </div>
             <!-- Formulario de reserva aquí -->
-            <form action="reservar.php" method="POST">
-                <h1>Reserva de transporte</h1>
-     
-                <form id="formularioReserva">
-                    <section>
-                        <h2>Información personal</h2>
-                        <label for="nombre">Nombre completo:</label>
-                        <input type="text" id="nombre" name="nombre" required>
-                        
-                        <label for="correo">Correo electrónico:</label>
-                        <input type="email" id="correo" name="correo" required>
-                        
-                        <label for="telefono">Teléfono:</label>
-                        <input type="tel" id="telefono" name="telefono" required>
-                    </section>
-                    
-                    <section>
-                        <h2>Detalles del viaje</h2>
-                        <label for="origen">Origen:</label>
-                        <input type="text" id="origen" name="origen" required>
-                        
-                        <label for="destino">Destino:</label>
-                        <input type="text" id="destino" name="destino" required>
-            
-                        <label for="fecha">Fecha:</label>
-                        <input type="date" id="fecha" name="fecha" required>
-                        
-                        <label for="hora">Hora:</label>
-                        <input type="time" id="hora" name="hora" required>
-                        
-                        <label for="pasajeros">Número de pasajeros:</label>
-                        <input type="number" id="pasajeros" name="pasajeros" min="1" required>
-                        
-                        <label for="tipoServicio">Tipo de servicio:</label>
-                        <select id="tipoServicio" name="tipoServicio" required>
-                            <option value="taxi">Taxi</option>
-                            <option value="autobus">Autobús</option>
-                            <option value="trasladoAeropuerto">Traslado al aeropuerto</option>
-                        </select>
-                    </section>
-                    
-                    <section>
-                        <h2>Información de pago</h2>
-                        <label for="tarjetaCredito">Número de tarjeta de crédito:</label>
-                        <input type="text" id="tarjetaCredito" name="tarjetaCredito" required>
-                        
-                        <label for="cvv">CVV:</label>
-                        <input type="number" id="cvv" name="cvv" required>
-                        
-                        <label for="fechaVencimiento">Fecha de vencimiento:</label>
-                        <input type="month" id="fechaVencimiento" name="fechaVencimiento" required>
-                    </section>
+            <div id="modalFormReservas" class="modal">
+                <div class="modal-contenido">
+                    <span class="cerrar" onclick="cerrarModal('modalFormReservas')">&times;</span>
+                    <form id="solicitudForm">
+                        <div>
+                            <label for="origen">Origen:</label>
+                            <input type="text" id="origen" required>
+                        </div>
+                        <div>
+                            <label for="destino">Destino:</label>
+                            <input type="text" id="destino" required>
+                        </div>
+                        <div>
+                            <label for="fechaViaje">Fecha de Viaje:</label>
+                            <input type="date" id="fechaViaje" required>
+                        </div>
+                        <div>
+                            <label for="horaViaje">Hora de Viaje:</label>
+                            <input type="time" id="horaViaje" required>
+                        </div>
+                        <div>
+                            <label for="pasajeros">Número de Pasajeros:</label>
+                            <input type="number" id="pasajeros" required>
+                        </div>
+                        <div>
+                            <label for="tipoServicio">Tipo de Servicio:</label>
+                            <select id="tipoServicio" required>
+                                <option selected disabled>Seleccione un servicio</option>
+                                <option value="trasladoAeropuerto">Traslado al Aeropuerto</option>
+                                <option value="transladoEventos">Translado a Eventos Especiales</option>
+                                <option value="viajesPorLaCiudad">Viajes Por la Ciudad</option>
+                                <option value="serviciosChofer">Servicios de Chofer</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="tipoVehiculo">Tipo de Vehículo:</label>
+                            <select id="tipoVehiculo" required>
+                                <option selected disabled>Seleccione un vehículo</option>
+                                <option value="mototaxi">Mototaxi</option>
+                                <option value="Sedan">Sedan</option>
+                                <option value="SUV">SUV</option>
+                                <option value="minivan">Minivan</option>
+                                <option value="autobus">Autobús</option>
+                                <option value="chivero">Chivero</option>
+                            </select>
+                        </div>
+                        <div>
+                            <h1 for="preferencias">Preferencias:</h1>
+                            <div>
+                                <label for="asientosBebes">Asientos para bebés:</label>
+                                <input type="checkbox" id="asientosBebes">
+                            </div>
+                            <div>
+                                <label for="asistenciaEquipaje">Asistencia con equipaje:</label>
+                                <input type="checkbox" id="asistenciaEquipaje">
+                            </div>
+                            <div>
+                                <label for="informacionAdicional">Información Adicional:</label>
+                                <input type="text" id="informacionAdicional" maxlength="73" />
+                            </div>
+                        </div>
+                        <div>
+                            <h1>Información de pago</h1>
+                            <label for="tarjetaCredito">Número de la tarjeta crédito o débito:</label>
+                            <input type="text" id="tarjetaCredito" name="tarjetaCredito" required>
+                            
+                            <label for="cvv">CVV:</label>
+                            <input type="number" id="cvv" name="cvv" required>
+                            
+                            <label for="fechaVencimiento">Fecha de vencimiento:</label>
+                            <input type="month" id="fechaVencimiento" name="fechaVencimiento" required>
+                        </div>
+                        <div>
+                            <button type="button" onclick="solicitudTransporte()">Solicitar Transporte</button>
+                        </div>
+                    </form>
+                    <div id="precioEstimado">Precio estimado: $0.00</div>
                 
-                    <button type="submit">Reservar</button>
-                </form>
-            
-                <script src="script.js"></script>
-            </form>
-        </div>
-        </div>
-        <div class="pagos">
-            <h3>Pago en Línea</h3>
-            <p>Aceptamos tarjetas de crédito y débito para tu conveniencia.</p>
+                    <script type="module" src="solicitudTransporte.js"></script>
+                </div>
+            </div>
+            <div class="pagos">
+                <h3>Pago en Línea</h3>
+                <p>Aceptamos tarjetas de crédito y débito para tu conveniencia.</p>
+            </div>
         </div>
     </section>
 
     <!-- Sección 5: Información de Contacto -->
     <section class="contact" id="contact">
-        <!-- Enlaces a redes sociales aquí -->
-        <div class="redes-sociales">
-            <h3>Síguenos en Redes Sociales</h3>
-            <a href="#" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-            <a href="#" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-        </div>
-
         <div class="contacto">
             <h2>Contacto</h2>
             <p>Dirección: Calle Principal #123, Ciudad, País</p>
@@ -333,7 +345,15 @@
             <p>Correo Electrónico: info@empresaDeTrasporte.com</p>
             <div>
                 <button onclick="abrirModal('modalContacto')">Formulario de Contacto</button>
-            </div>    
+            </div>
+                <!-- Enlaces a redes sociales aquí -->
+        <div class="redes-sociales">
+            <h3>Síguenos en Redes Sociales</h3>
+            <div>
+                <a href="#" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
         </div>
         <!-- Formulario de contacto en línea aquí -->
         <div id="modalContacto" class="modal">
@@ -354,11 +374,12 @@
                                 <label for="telefono">Teléfono:</label>
                                 <input type="tel" id="telefono" name="telefono" required>
                             </section>
-                            <button type="submit">Reservar</button>
+                            <button type="submit">Contactar</button>
                         </form>
                     </div>
                 </div>
             </div>
+        </div>
     </section>
 
     <div id="stylefive">
@@ -376,7 +397,7 @@
 	<footer>
         <a href="https://deCaldas.github.io/home/">
             <small>
-                <p>Sitio Web creado por Diego Whiskey. Derechos Reservados &copy;
+                <p>Página Web creada por Diego Whiskey. Derechos Reservados &copy;
                     <span id="currentYear"></span> Empresa de Transporte
 				</p>
 			</small>
@@ -389,5 +410,8 @@
             </script>
 	</footer>
 </body>
-<script src="src/js/index.js"></script>
-</html>
+<!-- <script src="solicitudTransporte.js"></script> -->
+<!-- <script src="src/js/index.js"></script>
+
+ -->
+ </html>
