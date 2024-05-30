@@ -1,0 +1,28 @@
+{
+  "name": "exetransapp",
+  "version": "0.4.13",
+  "description": "Aplicación web para transporte ejecutivo.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/deCaldas/exeTransportApp/"
+  },
+  "keywords": [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "Passenger",
+    "Transport",
+    "App"
+  ],
+  "author": "Diego Whiskey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/deCaldas/exeTransportApp/issues"
+  },
+  "readme": "https://github.com/deCaldas/exeTransportApp#readme",
+  "homepage": "http://empresa-de-transporte.surge.sh/"
+}
